@@ -42,8 +42,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":clark:domain"))
-    implementation(project(":clark:viewmodel"))
+    api(project(":clark:domain"))
+    api(project(":clark:viewmodel"))
 }
 
 publishing {
