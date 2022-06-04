@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
+    id("com.palantir.git-version") version("0.15.0")
 }
 
 android {
@@ -12,7 +13,8 @@ android {
         minSdk = 21
         targetSdk = 32
         versionCode = 1
-        versionName = "1.0"
+        val gitVersion: groovy.lang.Closure<String> by extra
+        versionName = gitVersion()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
+    id("com.palantir.git-version") version("0.15.0")
 }
 
 android {
@@ -51,7 +52,8 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.somekoder.clark"
             artifactId = "clark"
-            version = "0.1.0"
+            val gitVersion: groovy.lang.Closure<String> by extra
+            version = gitVersion()
 
             afterEvaluate {
                 from(components["release"])
