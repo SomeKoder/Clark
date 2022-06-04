@@ -25,21 +25,21 @@ abstract class ClarkViewModel<Intent, State, Effect> : ViewModel() {
 
 
     init {
-        subscribeEvents()
+        subscribeIntents()
     }
 
-    private fun subscribeEvents() {
+    private fun subscribeIntents() {
         viewModelScope.launch {
             intent.collect {
-                handleEvent(it)
+                handleIntent(it)
             }
         }
     }
 
-    abstract fun handleEvent(event : Intent)
+    abstract fun handleIntent(intent : Intent)
 
-    fun setEvent(event : Intent) {
-        viewModelScope.launch { _intent.emit(event) }
+    fun setIntent(intent : Intent) {
+        viewModelScope.launch { _intent.emit(intent) }
     }
 
     protected fun setState(reduce: State.() -> State) {
