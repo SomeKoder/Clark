@@ -6,7 +6,7 @@ sealed class DataState<out T, out E> {
         val value: T
     ) : DataState<T, Nothing>()
 
-    data class ErrorData<E>(
+    data class Error<E>(
         val error: E
     ) : DataState<Nothing, E>()
 
@@ -14,7 +14,4 @@ sealed class DataState<out T, out E> {
         val exception: Throwable
     ) : DataState<Nothing, Nothing>()
 
-    data class Loading(
-        val isLoading: Boolean
-    ) : DataState<Nothing, Nothing>()
 }

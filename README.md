@@ -2,7 +2,7 @@
 
 # Clark - for Clean Architecture!
 
-Hello! Welcome to **Clark**! A set of **libraries** that can be used to more efficiently create **Clean Architecture**.
+Hello! Welcome to **Clark**! A set of **libraries** that can be used to more efficiently create **Clean Architecture** applications.
 
 # Import
 
