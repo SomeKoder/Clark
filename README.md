@@ -1,5 +1,7 @@
 [![](https://jitpack.io/v/SomeKoder/clark.svg)](https://jitpack.io/#SomeKoder/clark)
 
+# Clark - for Clean Architecture!
+
 Hello! Welcome to **Clark**! A set of **libraries** that can be used to more efficiently create **Clean Architecture**.
 
 # Import
@@ -10,6 +12,7 @@ Hello! Welcome to **Clark**! A set of **libraries** that can be used to more eff
 #### Only need a certain feature? Check these out instead!
     implementation("com.github.SomeKoder.clark:clark-viewmodel:$clarkVersion")  // ViewModel
     implementation("com.github.SomeKoder.clark:clark-domain:$clarkVersion") // Domain
+    implementation("com.github.SomeKoder.clark:clark-retrofit-ext:$clarkVersion") // Retrofit Ext
 
 #### Don't forget Jitpack!
 

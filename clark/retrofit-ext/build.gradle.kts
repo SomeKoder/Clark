@@ -42,16 +42,14 @@ android {
 }
 
 dependencies {
-    api(project(":clark:domain"))
-    api(project(":clark:viewmodel"))
-    api(project(":clark:retrofit-ext"))
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 }
 
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.somekoder.clark"
-            artifactId = "clark"
+            groupId = "com.somekoder.clark.retrofit_ext"
+            artifactId = "clark-retrofit-ext"
             version = Config.version
 
             afterEvaluate {
