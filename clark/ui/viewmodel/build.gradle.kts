@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.somekoder.clark.viewmodel"
+    namespace = "com.somekoder.clark.ui.viewmodel"
 
     compileSdk = 32
 

@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":clark:domain"))
+    api(project(":clark:domain"))
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 }

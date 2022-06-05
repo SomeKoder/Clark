@@ -1,4 +1,4 @@
-package com.somekoder.clark.viewmodel
+package com.somekoder.clark.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

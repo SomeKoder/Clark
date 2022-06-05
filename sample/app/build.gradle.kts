@@ -44,8 +44,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":clark:ui"))
 
-    implementation(project(":clark"))
     implementation(project(":sample:use-cases"))
     implementation(project(":sample:repository"))
     implementation(project(":sample:data-source"))

@@ -1,4 +1,4 @@
-package com.somekoder.clark.retrofit_ext.call_adapter
+package com.somekoder.clark.data_source.retrofit_ext.call_adapter
 
 import okhttp3.Request
 import okhttp3.ResponseBody

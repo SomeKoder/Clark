@@ -4,14 +4,10 @@ import androidx.lifecycle.viewModelScope
 import com.somekoder.clark.domain.DataState
 import com.somekoder.clark.sample.R
 import com.somekoder.clark.sample.use_cases.LoginUseCase
-import com.somekoder.clark.viewmodel.ClarkViewModel
+import com.somekoder.clark.ui.viewmodel.ClarkViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.forEach
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel

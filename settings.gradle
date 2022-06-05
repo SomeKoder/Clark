@@ -14,15 +14,17 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Clark"
-include ':sample'
-include ':sample:app'
+
+if (!System.env.JITPACK) {
+    include ':sample:app'
+    include ':sample:data-source'
+    include ':sample:repository'
+    include ':sample:use-cases'
+}
+
 include ':clark'
+
 include ':clark:domain'
-
-
-include ':sample:data-source'
-include ':sample:repository'
-include ':sample:use-cases'
 
 include ':clark:ui'
 include ':clark:ui:viewmodel'

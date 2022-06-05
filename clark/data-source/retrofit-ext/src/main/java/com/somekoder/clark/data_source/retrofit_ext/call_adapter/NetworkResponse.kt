@@ -1,4 +1,4 @@
-package com.somekoder.clark.retrofit_ext.call_adapter
+package com.somekoder.clark.data_source.retrofit_ext.call_adapter
 
 import com.somekoder.clark.domain.NetworkResult
 import java.io.IOException
