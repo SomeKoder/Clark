@@ -33,8 +33,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":clark:retrofit-ext"))
-    implementation(project(":clark:domain"))
+    implementation(project(":clark:data-source"))
+
     implementation(project(":sample:repository"))
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")

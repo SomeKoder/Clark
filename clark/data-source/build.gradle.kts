@@ -5,8 +5,6 @@ plugins {
 }
 
 android {
-    namespace = "com.somekoder.clark.viewmodel"
-
     compileSdk = 32
 
     defaultConfig {
@@ -33,27 +31,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    testFixtures {
-        enable = true
-    }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
-    val lifecycleVersion = "2.5.0-rc01"
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
+    api(project(":clark:data-source:retrofit-ext"))
 }
 
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.somekoder.clark.viewmodel"
-            artifactId = "clark-viewmodel"
+            groupId = "com.somekoder.clark.data_source"
+            artifactId = "data-source"
             version = Config.version
 
             afterEvaluate {

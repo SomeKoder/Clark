@@ -1,18 +1,13 @@
 [![](https://jitpack.io/v/SomeKoder/clark.svg)](https://jitpack.io/#SomeKoder/clark)
 
-# Clark - for Clean Architecture!
-
-Hello! Welcome to **Clark**! A set of **libraries** that can be used to more efficiently create **Clean Architecture** applications.
-
 # Import
 
-#### Everything Clark has to offer!
-    implementation("com.github.SomeKoder:clark:$clarkVersion")
+#### Everything inside of the Data Source layer!
+    implementation("com.github.SomeKoder.clark:clark-data-source:$clarkVersion")
 
-#### Only need a certain layer? Check these out instead!
-    implementation("com.github.SomeKoder.clark:clark-ui:$clarkVersion")  // Presentation layer
-    implementation("com.github.SomeKoder.clark:clark-domain:$clarkVersion") // Domain layer
-    implementation("com.github.SomeKoder.clark:clark-data-source:$clarkVersion") // Data Source layer
+#### Only need a certain feature? Check these out instead!
+    implementation("com.github.SomeKoder.clark.data-source:clark-retrofit-ext:$clarkVersion")  // Retrofit Extensions
+
 
 #### Don't forget Jitpack!
 

@@ -5,6 +5,8 @@ plugins {
 }
 
 android {
+    namespace = "com.somekoder.clark.viewmodel"
+
     compileSdk = 32
 
     defaultConfig {
@@ -42,16 +44,17 @@ android {
 }
 
 dependencies {
-    implementation(project(":clark:domain"))
-
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    api(project(":clark:domain"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
+    val lifecycleVersion = "2.5.0-rc01"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
 }
 
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.somekoder.clark.retrofit_ext"
-            artifactId = "clark-retrofit-ext"
+            groupId = "com.somekoder.clark.ui.viewmodel"
+            artifactId = "clark-viewmodel"
             version = Config.version
 
             afterEvaluate {
