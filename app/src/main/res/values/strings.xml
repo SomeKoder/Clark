@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Clark Sample</string>
+    <string name="login_error">Invalid username and password. Try \"Bob\" and \"1234\"</string>
+</resources>
