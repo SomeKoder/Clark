@@ -31,27 +31,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    testFixtures {
-        enable = true
-    }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
 }
 
 dependencies {
-    api(project(":clark:domain"))
-    api(project(":clark:ui"))
-    api(project(":clark:data-source"))
+    api(project(":clark:ui:viewmodel"))
 }
 
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.somekoder.clark"
-            artifactId = "clark"
+            groupId = "com.somekoder.clark.ui"
+            artifactId = "clark-ui"
             version = Config.version
 
             afterEvaluate {

@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("maven-publish")
 }
 
 android {
@@ -31,32 +30,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    testFixtures {
-        enable = true
-    }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
 }
 
 dependencies {
-    api(project(":clark:domain"))
-    api(project(":clark:ui"))
-    api(project(":clark:data-source"))
-}
+    implementation(project(":clark:data-source"))
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.somekoder.clark"
-            artifactId = "clark"
-            version = Config.version
+    implementation(project(":sample:repository"))
 
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 }

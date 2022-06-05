@@ -5,6 +5,8 @@ plugins {
 }
 
 android {
+    namespace = "com.somekoder.clark.viewmodel"
+
     compileSdk = 32
 
     defaultConfig {
@@ -43,15 +45,16 @@ android {
 
 dependencies {
     api(project(":clark:domain"))
-    api(project(":clark:ui"))
-    api(project(":clark:data-source"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
+    val lifecycleVersion = "2.5.0-rc01"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
 }
 
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.somekoder.clark"
-            artifactId = "clark"
+            groupId = "com.somekoder.clark.ui.viewmodel"
+            artifactId = "clark-viewmodel"
             version = Config.version
 
             afterEvaluate {

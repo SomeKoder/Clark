@@ -31,27 +31,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    testFixtures {
-        enable = true
-    }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
 }
 
 dependencies {
-    api(project(":clark:domain"))
-    api(project(":clark:ui"))
-    api(project(":clark:data-source"))
+    api(project(":clark:data-source:retrofit-ext"))
 }
 
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.somekoder.clark"
-            artifactId = "clark"
+            groupId = "com.somekoder.clark.data_source"
+            artifactId = "data-source"
             version = Config.version
 
             afterEvaluate {

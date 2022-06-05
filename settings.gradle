@@ -12,8 +12,20 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "Clark"
-include ':app'
+include ':sample'
+include ':sample:app'
 include ':clark'
 include ':clark:domain'
-include ':clark:viewmodel'
+
+
+include ':sample:data-source'
+include ':sample:repository'
+include ':sample:use-cases'
+
+include ':clark:ui'
+include ':clark:ui:viewmodel'
+
+include ':clark:data-source'
+include ':clark:data-source:retrofit-ext'
