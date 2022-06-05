@@ -2,7 +2,6 @@ plugins {
     id("java-library")
     id("org.jetbrains.kotlin.jvm")
     id("maven-publish")
-    id("com.palantir.git-version")
 }
 
 java {
@@ -15,8 +14,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.somekoder.clark.domain"
             artifactId = "clark-domain"
-            val gitVersion: groovy.lang.Closure<String> by extra
-            version = gitVersion()
+            version = Config.version
 
             from(components["java"])
         }
