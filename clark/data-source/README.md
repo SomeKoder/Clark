@@ -6,7 +6,7 @@
     implementation("com.github.SomeKoder.clark:clark-data-source:$clarkVersion")
 
 #### Only need a certain feature? Check these out instead!
-    implementation("com.github.SomeKoder.clark.data-source:clark-retrofit-ext:$clarkVersion")  // Retrofit Extensions
+    implementation("com.github.SomeKoder.clark:clark-retrofit-ext:$clarkVersion")  // Retrofit Extensions
 
 
 #### Don't forget Jitpack!

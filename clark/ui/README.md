@@ -6,7 +6,7 @@
     implementation("com.github.SomeKoder.clark:clark-ui:$clarkVersion")
 
 #### Only need a certain feature? Check these out instead!
-    implementation("com.github.SomeKoder.clark.ui:clark-viewmodel:$clarkVersion")  // View Model
+    implementation("com.github.SomeKoder.clark:clark-viewmodel:$clarkVersion")  // View Model
 
 
 #### Don't forget Jitpack!
