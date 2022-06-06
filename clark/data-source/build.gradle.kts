@@ -41,7 +41,7 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.somekoder.clark.data_source"
-            artifactId = "data-source"
+            artifactId = "clark-data-source"
             version = Config.version
 
             afterEvaluate {
